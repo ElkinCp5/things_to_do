@@ -12,7 +12,9 @@
 
 # production
 /build
-/backend/public
+src/backend/public/**/*.js
+src/backend/public/**/*.js.map
+
 
 
 # misc

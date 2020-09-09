@@ -10,10 +10,12 @@ const devMode = process.env.NODE_ENV;
 // development
 module.exports = {
   mode: 'development',
-  entry: './src/frontend/index.js',
+  entry: {
+    app: './src/frontend/index.js'
+  },
   output: {
+    filename: '[name].bundle.js',
     path: path.join(__dirname, './src/backend/public'),
-    filename: 'js/bundle.js',
   },
   devServer: {
     port: '4000',
@@ -66,6 +68,8 @@ module.exports = {
     // eslint-disable-next-line new-cap
     new htmlWebpackPlugin({
       template: './src/frontend/public/index.html',
+      xhtml: true,
+      hash: true
     }),
     // eslint-disable-next-line new-cap
     new miniCssExtractPlugin({
