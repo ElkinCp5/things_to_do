@@ -1,17 +1,18 @@
 const path = require('path');
+const liveReloadPlugin = require('webpack-livereload-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const liveReloadPlugin = require('webpack-livereload-plugin');
 
 const devMode = process.env.NODE_ENV;
 
 // console.log({devMode});
 // 'production'
+// development
 module.exports = {
-  mode: devMode,
-  entry: './frontend/src/index.js',
+  mode: 'development',
+  entry: './src/frontend/index.js',
   output: {
-    path: path.join(__dirname, './backend/public'),
+    path: path.join(__dirname, './src/backend/public'),
     filename: 'js/bundle.js',
   },
   devServer: {
@@ -64,7 +65,7 @@ module.exports = {
   plugins: [
     // eslint-disable-next-line new-cap
     new htmlWebpackPlugin({
-      template: './frontend/public/index.html',
+      template: './src/frontend/public/index.html',
     }),
     // eslint-disable-next-line new-cap
     new miniCssExtractPlugin({

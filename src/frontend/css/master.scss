@@ -1,0 +1,172 @@
+body{
+    background-color:#eceff1;
+    color: #526169;
+    font-family:Roboto;
+  }
+  .container {
+      width: 90%;
+      min-width:360px;
+      max-width:600px;
+  }
+  .separator{
+      display: block;
+      position: relative;
+      margin-top: 5%;
+  }
+  .card.task{
+  
+  }
+  .card .card-head{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 10px 20px;
+  }
+  .card .card-content{
+    display:block;
+    min-height:300px;
+    max-height:600px;
+    overflow-y:auto;
+  }
+  .input-field-circle{
+  
+  }
+  .input-field-circle > i.material-icons{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #b0bec5;
+  }
+  input:not([type]), 
+  .input-field-circle > input[type=text]:not(.browser-default) {
+      border: 1px solid #eceff1;
+      border-radius: 50px;
+      padding: 0 20px;
+      padding-right: 40px;
+      width: calc(100% - 60px);
+  }
+  
+  input:not([type]):focus:not([readonly]), 
+  input[type=text]:not(.browser-default):focus:not([readonly]) {
+      border: 1.5px solid #eceff1;
+      box-shadow: none;
+  }
+  .tasks_month{
+    //background-color:cyan;
+  }
+  .tasks_month .dateTasksMonth{
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    font-weight: 300px;
+    font-size: 20px;
+      
+    //background-color:purple;
+  }
+  .tasks_month .tasksMonth-content{
+    display:block;
+    position:relative;
+  
+   // background-color:orange;
+  }
+  .tasksMonth-content .collectionTasksMonth{
+    
+  }
+  .tasks_month .task-item{
+    display: grid;
+    position:relative;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width:100%;
+    height:auto;
+    border-left:solid 4px #b0bec5;
+    
+    -webkit-transition: background-color 0.3s; /* Safari prior 6.1 */
+    transition: background-color 0.3s;
+  }
+  
+  .task-item .marker{
+    display:block;
+    position:absolute;
+    width:14px;
+    height:14px;
+    top:-9px;
+    left:-9px;
+    border-radius:50px;
+    background-color:white;
+  }
+  .task-item .marker-end{
+    display:none;
+    position:absolute;
+    width:14px;
+    height:14px;
+    bottom:-9px;
+    left:-9px;
+    border-radius:50px;
+    background-color:white;
+  }
+  .dateTasksMonth .task-item:last-child  .marker-end{
+    display:block;
+  }
+  .dateTasksMonth .task-item:hover{
+    background-color:rgba(200,200,200, 0.1);
+    border-radius:5px;
+    cursor:pointer;
+    
+    -webkit-transition: background-color 0.3s; /* Safari prior 6.1 */
+    transition: background-color 0.3s;
+  }
+  
+  .task-item span.btn-floating{
+    right:10px;
+    bottom:10px;
+  }
+  
+  .task-item span.btn-floating:hover{
+    background-color:red !important;
+  }
+  .date {
+    grid-column: 1;
+    grid-row: 1;
+    text-align:center;
+  }
+  .info { 
+    grid-column: 2/6;
+    grid-row: 1;
+    
+    padding-left:30px;
+    font-size:1em;
+  }
+  
+  .info .title{
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    
+    width:100%;
+    height:30px;
+    margin-left:-35px;
+    color: #b0bec5;
+  }
+  
+  .info .title i{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .info .title span{
+    grid-column: 2/13;
+    grid-row: 1;
+    
+    font-weight:bold;
+    text-transform: uppercase;
+  }
+  .info > p{
+    
+  }
+  .info > span{
+    color: #b0bec5;
+  }

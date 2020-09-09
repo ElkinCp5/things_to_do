@@ -1,3 +1,11 @@
+/* eslint-disable max-len */
+// eslint-disable-next-line import/no-unresolved
+import creatConnect from './creatConnect';
+
+const UrlConnect = creatConnect(process.env.USER_MONGO, process.env.PASSWORD_MONGO, (process.env.URL_MONGO).toString(), process.env.DB_MONGO);
+// eslint-disable-next-line no-console
+// console.log({ UrlConnect });
+
 module.exports = {
   port: process.env.PORT || 8080,
   host: 'http://localhost:8080',
@@ -16,5 +24,5 @@ module.exports = {
     socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
     family: 4, // Use IPv4, skip trying IPv6
   },
-  UrlConnect: process.env.URL_MONGO,
+  UrlConnect,
 };
