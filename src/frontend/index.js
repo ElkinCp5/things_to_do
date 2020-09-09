@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./components/app";
+import App from "./app";
 // import 'antd/dist/antd.css';
 import './css/master.scss';
 // import RouterLink from './routes';
