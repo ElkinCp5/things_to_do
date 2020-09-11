@@ -7,6 +7,4 @@ const reducer = combineReducers({
     tasks
 });
 
-const store = createStore(reducer);
-
-export default store;
+export default createStore(reducer);
