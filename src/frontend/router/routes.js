@@ -23,23 +23,26 @@ const routes = [
     },
     {
         path: "/dashboard",
-        component: dashboard,
         isAuth: true,
+        component: dashboard,
         routes: [
             {
                 path: "/dashboard",
+                name: "Lista de tablero",
                 exact: true,
                 isAuth: true,
                 component: boardList
             },
             {
                 path: "/dashboard/:board",
+                name: "Lista de tareas",
                 exact: true,
                 isAuth: true,
                 component: tasksList
             },
             {
                 path: "/dashboard/:board/:homework",
+                name: "Tarea",
                 exact: true,
                 isAuth: true,
                 component: homeWork

@@ -2,7 +2,9 @@
 // eslint-disable-next-line import/no-unresolved
 import creatConnect from './creatConnect';
 
-const UrlConnect = creatConnect(process.env.USER_MONGO, process.env.PASSWORD_MONGO, (process.env.URL_MONGO).toString(), process.env.DB_MONGO);
+const UrlConnect = (process.env.NODE_ENV == 'production') 
+? creatConnect(process.env.USER_MONGO, process.env.PASSWORD_MONGO, (process.env.URL_MONGO).toString(), process.env.DB_MONGO)
+: `${process.env.LOCAL_MONGO}/${process.env.DB_MONGO}`;
 // eslint-disable-next-line no-console
 // console.log({ UrlConnect });
 

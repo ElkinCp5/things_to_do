@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import Dashboard from "../layouts/dashboard";
+import Layout from ".";
 import {
   Row, Col, Card,
 } from 'antd';
@@ -9,7 +9,8 @@ import {
 export default (props) => {
   let { routes, match } = props;
   let { params } = match;
+  /*console.log({PageDash: routes});*/
   return (
-    <Dashboard className="container" param={ params } routes={routes}/>
+    <Layout className="container" param={params} routes={routes}/>
   );
 };

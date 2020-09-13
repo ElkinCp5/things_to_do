@@ -2,9 +2,10 @@ import React, {Component} from "react";
 import {
   BrowserRouter as Router,
   Switch,
+  Link,
   withRouter
 } from "react-router-dom";
-import { RouteWithSubRoutes } from "../../helpers/utils";
+import { RouteWithSubRoutes } from "../../../helpers/utils";
 
 class dashboardLayout  extends Component{
 
@@ -22,13 +23,21 @@ class dashboardLayout  extends Component{
 
     let { location, routes } = this.props;
     let { pathname } = location;
-    console.log({properties: this.props});
+    /*console.log({layoutDahs: routes});*/
     return (
       <Router>
+        <ul>
+          {
+            routes.map((route, index)=> 
+              <li key={index}>
+                <Link to={route.path}>{route.name}</Link>
+              </li>)
+          }
+        </ul>
         <Switch>
             {
                 routes.map((route, index) => (
-                <RouteWithSubRoutes key={`subroute-${index}`} {...route} />
+                  <RouteWithSubRoutes key={index} {...route} />
                 ))
             }
         </Switch>
